@@ -17,9 +17,13 @@ exclude     = [
 ]
 
 [dependencies]
-libc = { version = "0.2.73", features = [ "extra_traits" ] }
 bitflags = "1.1"
 cfg-if = "0.1.10"
+
+[dependencies.libc]
+git = "https://github.com/npatsakula/libc"
+branch = "elbrus_v2"
+features = [ "extra_traits" ]
 
 [target.'cfg(target_os = "dragonfly")'.build-dependencies]
 cc = "1"
